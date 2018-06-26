@@ -70,7 +70,7 @@ const getSingleUserController = (req, res, next) => {
 const updateUserController = (req, res, next) => {
     let id = req.params.id;
     User.findByIdAndUpdate(id, {$set: {
-        name: req.body.name ? name : req.body.fathersName,
+        name: req.body.name,
         fathersName: req.body.fathersName,
         mothersName: req.body.mothersName,
         dateOfbirth: req.body.dateOfbirth,
